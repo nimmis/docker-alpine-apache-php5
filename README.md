@@ -26,8 +26,8 @@ The images exposes a volume at /web. The structure below /web is
 | --------- | -------- |
 | html | web root |
 | cgi-bin | cgi bin folder |
-| config | apache config directory |
-| logs | nginx log directory |
+| config | config directory |
+| logs | log directory |
 
 To use this start the container with
 
