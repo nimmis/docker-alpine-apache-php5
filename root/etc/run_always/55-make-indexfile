@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# create empty index.hmtl if html directory does not exists
+
+if [ ! -d /web/html ]; then
+  mkdir /web/html
+  echo "<html>
+  <body>
+    <h1>It Works!</h1>
+    Apache/php5 on Alpine with Docker container <a href=https://hub.docker.com/r/nimmis/alpine-apache-php5/>nimmis/alpine-apache-php5</a>
+    <br>PHP version <?php echo phpversion(); ?>
+  </body>
+</html>" > /web/html/index.php
+  chown -R apache.www-data /web/html
+fi
